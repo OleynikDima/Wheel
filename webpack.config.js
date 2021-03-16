@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-var MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { VueLoaderPlugin } = require("vue-loader");
 
 const mode = {
@@ -15,9 +16,6 @@ const PATH = {
 module.exports = {
   mode: mode.dev,
   entry: PATH.src,
-  // output: {
-  //   path: PATH.build,
-  // },
   module: {
     rules: [
       {
@@ -57,6 +55,7 @@ module.exports = {
   },
   plugins: [
     new VueLoaderPlugin(),
+
     new MiniCssExtractPlugin({
       filename: "style.css",
     }),
@@ -68,7 +67,7 @@ module.exports = {
   resolve: {
     extensions: [".js", ".vue", ".png", ".html", ".css"],
     alias: {
-      vue$: "vue/dist/vue.common.js", // 'vue/dist/vue.common.js' for webpack 1
+      vue$: "vue/dist/vue.common.js",
     },
   },
 };

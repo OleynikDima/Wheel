@@ -1,24 +1,25 @@
 <template>
-    <div class="container">
-       <Fortune />
-       <!-- <Popup/> -->
-    </div>
+  <div class="container">
+    <Wheel />
+    <!-- <Popup/> -->
+  </div>
 </template>
 
 <script>
 // import Button from './components/Button.vue'
-import Fortune from './components/Fourtune'
-import Popup from './components/Popup'
-import './style/normolize.scss'
+import Wheel from './components/Wheel/Wheel';
+import Popup from './components/Popup/Popup';
+import './style/main.scss';
 export default {
-    name:'app',
-    components:{
-    Fortune, Popup
-    },
-}
+  name: 'app',
+  components: {
+    Wheel,
+    Popup,
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-   .container {
-   }
+.container {
+}
 </style>

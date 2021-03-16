@@ -20,6 +20,8 @@
     "node-sass": "^5.0.0",
     "nodemon": "^2.0.7",
     "prettier": "1.19.1",
+    "prettier-webpack-loader": "^0.0.1",
+    "prettier-webpack-plugin": "^0.2.3",
     "sass": "^1.32.8",
     "sass-loader": "^11.0.1",
     "url-loader": "^4.1.1",
@@ -28,11 +30,13 @@
     "webpack": "^5.25.0",
     "webpack-dev-server": "^3.11.2"
   },
-  "name": "vue",
+  "name": "wheel",
+  "main": "main.js",
   "private": true,
   "homepage": "https://OleynikDima.github.io/wheel",
   "version": "1.0.0",
   "scripts": {
+    "format": "prettier --write src/components/**",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-cli serve --mode development --open",
     "build": "webpack",
@@ -44,7 +48,7 @@
     "url": "git+https://github.com/OleynikDima/wheel.git"
   },
   "keywords": [],
-  "author": "qwwqw",
+  "author": "OleynikDima",
   "license": "ISC",
   "description": "",
   "_id": "vue@1.0.0"
