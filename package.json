@@ -30,7 +30,7 @@
   },
   "name": "vue",
   "private": true,
-  "homepage": "https://OleynikDima.github.io/Wheel",
+  "homepage": "https://OleynikDima.github.io/wheel",
   "version": "1.0.0",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -41,7 +41,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/OleynikDima/Wheel.git"
+    "url": "git+https://github.com/OleynikDima/wheel.git"
   },
   "keywords": [],
   "author": "qwwqw",

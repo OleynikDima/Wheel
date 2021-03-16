@@ -2,20 +2,22 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 var MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { VueLoaderPlugin } = require("vue-loader");
+
+const mode = {
+  dev: "development",
+  prod: "production",
+};
 const PATH = {
-  src: path.join(__dirname, "src"),
-  disc: path.join(__dirname, "dist"),
+  src: path.join(__dirname, "src", "main"),
+  build: path.join(__dirname, "build"),
 };
 
 module.exports = {
-  mode: "development",
-  // externals: PATH,
-  entry: path.join(__dirname, "src", "main"),
-  output: {
-    path: PATH.disc,
-    filename: "build.js",
-    publicPath: "dist/",
-  },
+  mode: mode.dev,
+  entry: PATH.src,
+  // output: {
+  //   path: PATH.build,
+  // },
   module: {
     rules: [
       {
