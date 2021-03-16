@@ -20,9 +20,5 @@ export default {
 
 <style lang="scss" scoped>
    .container {
-       /* display: flex;
-       justify-content: center;
-       align-items: center;
-       transform: translateY(25%) */
    }
 </style>
