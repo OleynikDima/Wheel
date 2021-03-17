@@ -53,7 +53,7 @@
   bottom: 480px;
   left: 50%;
 }
-.fw-btn__btn[data-v-e84d09d6]:before {
+.fw-btn__btn:before {
   border-left: 12px solid transparent;
   border-right: 12px solid transparent;
   border-bottom: 18px solid #15bd96;
@@ -67,7 +67,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
+};
 
 $breakpoint-tablet: 320px;
 $tablet-width: 768px;

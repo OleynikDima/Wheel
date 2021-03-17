@@ -4,7 +4,6 @@
       v-if="isShowPopup"
       @click="logger"
       :item="dataPrize"
-      class="modal-window"
     />
     <!-- type: canvas -->
     <div class="wheel-box">
@@ -15,7 +14,6 @@
         :verify="cavansVerify"
         @rotateStart="onCanvasRotateStart"
         @rotateEnd="onRotateEnd"
-        @canvas="str"
       />
     </div>
   </div>
@@ -50,28 +48,30 @@ export default {
           color: '#ffffff', // Font color (this parameter is not required when type is image)
           probability: 15, //* Probability, up to 4 decimal places (the sum of the probabilities of all prizes
           weight: 1, // Weight, if useWeight is true, the probability is calculated by weight (weight must be an integer), so probability is invalid
+          url: 'https://st.depositphotos.com/1006597/2815/i/950/depositphotos_28158397-stock-photo-eggplant.jpg',
+
         },
         {
           id: 2,
-          title: 'Eggplant',
+          title: 'Cherry',
           name: '2',
           value: "Red's value",
           bgColor: '#dd3832',
           color: '#ffffff',
           probability: 15,
           weight: 1,
-          url: 'src/assets/eggplant.jpeg',
+          url: 'https://static4.depositphotos.com/1006597/356/i/950/depositphotos_3565845-stock-photo-sweet-cherry.jpg',
         },
         {
           id: 3,
           name: '3',
-          title: 'French fries',
+          title: 'Banana',
           value: "Yellow's value",
           bgColor: '#fef151',
           color: '#ffffff',
           probability: 20,
           weight: 1,
-          url: 'src/assets/french_fries.png',
+          url: 'https://static9.depositphotos.com/1642482/1149/i/600/depositphotos_11490585-stock-photo-bananas.jpg',
         },
         {
           id: 4,
@@ -82,7 +82,7 @@ export default {
           color: '#ffffff',
           probability: 15,
           weight: 1,
-          url: '../../src/assets/donut.png',
+          url: 'https://st.depositphotos.com/1194063/3842/i/950/depositphotos_38420757-stock-photo-delicious-donut-with-sprinkles.jpg',
         },
         {
           id: 5,
@@ -93,7 +93,7 @@ export default {
           color: '#ffffff',
           probability: 15,
           weight: 1,
-          url: '../src/assets/apple-catering.jpeg',
+          url: 'https://static9.depositphotos.com/1642482/1148/i/950/depositphotos_11488926-stock-photo-green-apple-fruits-and-half.jpg',
         },
         {
           id: 6,
@@ -104,7 +104,7 @@ export default {
           color: '#ffffff',
           probability: 20,
           weight: 1,
-          url: '../src/assets/eggplant.jpeg',
+          url: 'https://st.depositphotos.com/1006597/2815/i/950/depositphotos_28158397-stock-photo-eggplant.jpg',
         },
       ],
       hendlers: {
@@ -152,3 +152,4 @@ export default {
   },
 };
 </script>
+
