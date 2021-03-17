@@ -1,16 +1,16 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const { VueLoaderPlugin } = require("vue-loader");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { VueLoaderPlugin } = require('vue-loader');
 
 const mode = {
-  dev: "development",
-  prod: "production",
+  dev: 'development',
+  prod: 'production',
 };
 const PATH = {
-  src: path.join(__dirname, "src", "main"),
-  build: path.join(__dirname, "build"),
+  src: path.join(__dirname, 'src', 'main'),
+  build: path.join(__dirname, 'build'),
 };
 
 module.exports = {
@@ -20,35 +20,35 @@ module.exports = {
     rules: [
       {
         test: /\.vue$/,
-        loader: "vue-loader",
+        loader: 'vue-loader',
       },
       {
         test: /\.html$/i,
-        loader: "html-loader",
+        loader: 'html-loader',
       },
       {
         test: /\.js$/,
-        loader: "babel-loader",
-        exclude: (file) => /node_modules/.test(file) && !/\.vue\.js/.test(file),
+        loader: 'babel-loader',
+        exclude: file => /node_modules/.test(file) && !/\.vue\.js/.test(file),
       },
       {
         test: /\.css$/,
         use: [
-          process.env.NODE_ENV !== "production"
-            ? "vue-style-loader"
+          process.env.NODE_ENV !== 'production'
+            ? 'vue-style-loader'
             : MiniCssExtractPlugin.loader,
-          "css-loader",
+          'css-loader',
         ],
       },
       {
         test: /\.scss$/i,
-        use: ["vue-style-loader", "css-loader", "sass-loader"],
+        use: ['vue-style-loader', 'css-loader', 'sass-loader'],
       },
       {
         test: /\.(png|jpe?g|gif)$/,
-        loader: "file-loader",
+        loader: 'file-loader',
         options: {
-          name: "[name].[ext]?[hash]",
+          name: '[name].[ext]?[hash]',
         },
       },
     ],
@@ -57,17 +57,17 @@ module.exports = {
     new VueLoaderPlugin(),
 
     new MiniCssExtractPlugin({
-      filename: "style.css",
+      filename: 'style.css',
     }),
     new HtmlWebpackPlugin({
-      title: "Vue Wheel",
-      template: "./index.html",
+      title: 'Vue Wheel',
+      template: './index.html',
     }),
   ],
   resolve: {
-    extensions: [".js", ".vue", ".png", ".html", ".css"],
+    extensions: ['.js', '.vue', '.png', '.html', '.css'],
     alias: {
-      vue$: "vue/dist/vue.common.js",
+      vue$: 'vue/dist/vue.common.js',
     },
   },
 };

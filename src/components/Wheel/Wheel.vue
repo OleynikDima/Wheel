@@ -1,7 +1,7 @@
 <template>
   <div>
     <Popup
-      v-if="isShowPopup"
+      v-show="isShowPopup"
       @click="logger"
       :item="dataPrize"
     />
@@ -112,7 +112,6 @@ export default {
       },
     };
   },
-
   methods: {
     onCanvasRotateStart(rotate) {
       if (this.canvasVerify) {
@@ -120,7 +119,7 @@ export default {
         this.DoServiceVerify(verified, 2000).then(verifiedRes => {
           if (verifiedRes) {
             console.log('Verification passed, start to rotate');
-            // rotate() // Call the callback, start spinning
+            rotate() // Call the callback, start spinning
             this.canvasVerify = false; // Turn off verification mode
           } else {
             alert('Failed verification');
